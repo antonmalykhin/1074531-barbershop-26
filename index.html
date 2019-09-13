@@ -20,7 +20,7 @@
         <li><a href="#">контакты</a></li>
       </ul>
       <ul>
-        <li><button type="button">вход</button></li>
+        <li><a href="#">вход</a></li>
       </ul>
     </nav>
   </header>
@@ -60,14 +60,14 @@
             Нам наконец завезли Ягермайстер! теперь вы можете пропустить
             стаканчик во время стрижки
           </p>
-          <time datetime="11-01-2019">11 января</time>
+          <time datetime="2019-01-11">11 января</time>
         </li>
         <li>
           <p>
             В нашей команде пополнение, Борис «Бритва» Стригунец, обладaтель
             множества титулов и наград пополнил наши стройные ряды
           </p>
-          <time datetime="18-01-2019">18 января</time>
+          <time datetime="2019-01-18">18 января</time>
         </li>
       </ul>
       <a href="#">Все новости</a>
@@ -76,7 +76,7 @@
       <h2>Фотогалерея</h2>
       <figure>
         <a href="#">
-          <img src="img/photogallery.jpg" width="285" alt="Интерьер">
+          <img src="img/photogallery.jpg" width="285" height="164" alt="Интерьер">
         </a>
       </figure>
       <button type="button">Назад</button>
@@ -100,10 +100,29 @@
     <section>
       <h2>Записаться</h2>
       <p>
-        укажите желаемую дату и время и мы свяжемся с вами для подтверждения
+        Укажите желаемую дату и время и мы свяжемся с вами для подтверждения
         брони
       </p>
-      <!-- форма записи -->
+      <form action="#" method="post">
+        <p>
+          <label for="date-field">Дата</label>
+          <input type="text" name="date" id="date-field" placeholder="09.10.2017">
+        </p>
+        <p>
+          <label for="time-field">Время</label>
+          <input type="text" name="time" id="time-field" placeholder="10:00">
+        </p>
+        <p>
+          <label for="name-field">Ваше имя</label>
+          <input type="text" name="name" id="name-field" placeholder="Борода">
+        </p>
+        <p>
+          <label for="phone-field">Телефон</label>
+          <input type="text" name="phone" id="phone-field" placeholder="+7 123 456-78-90">
+        </p>
+        <button type="submit">Отправить</button>
+
+      </form>
     </section>
   </main>
   <footer>
@@ -127,11 +146,30 @@
   <section>
     <h2>Личный кабинет</h2>
     <p>Введите свой логин и пароль.</p>
-    <!-- Форма входа в личный кабинет -->
+    <form action="#" method="post">
+      <p>
+        <label for="login-field">Логин</label>
+        <input type="text" name="login" id="login-field" placeholder="Логин">
+      </p>
+      <p>
+        <label for="password-field">Пароль</label>
+        <input type="password" name="password" id="password-field" placeholder="Пароль">
+      </p>
+      <p>
+        <input type="checkbox" name="remember-me" id="remember-me-field">
+        <label for="remember-me-field">Запомните меня</label>
+      </p>
+      <a href="#">Я забыл пароль</a>
+      <button type="submit">Войти</button>
+    </form>
+
     <button type="button">Закрыть</button>
   </section>
+
   <section>
     <h2>Как до нас добраться</h2>
+    <img src="img/map-big.jpg" width="780" height="560"
+      alt="Барбершоп «Бородинский» Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8">
     <button type="button">Закрыть</button>
   </section>
 </body>
