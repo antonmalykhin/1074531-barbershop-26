@@ -4,60 +4,71 @@
 <head>
   <meta charset="utf-8">
   <title>Прайс-лист</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic"
+    rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
 </head>
 
-<body>
-  <header>
-    <nav>
+<body class="inner-page">
+  <header class="main-header">
+    <nav class="main-navigation">
       <a href="index.html"><img src="img/logo.svg" width="110" alt="Барбершоп «Бородинский»"></a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="#">информация</a></li>
         <li><a href="#">новости</a></li>
         <li><a href="#">прайс-лист</a></li>
         <li><a href="catalog.html">магазин</a></li>
         <li><a href="#">контакты</a></li>
       </ul>
-      <ul>
+      <ul class="user-navigation">
         <li><a href="#">вход</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <h1>Прайс-лист</h1>
-    <ul>
+
+  <main class="container">
+    <h1 class="page-title">Прайс-лист</h1>
+    <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
-      <li>Прайс-лист</li>
+      <li class="breadcrumbs-current">Прайс-лист</li>
     </ul>
-    <p>истинно мужская классика</p>
-    <section>
-      <h2>Средства</h2>
-      <p>мы используем только лучшие средства:</p>
-      <ul>
-        <li>Baxter of California</li>
-        <li>Mr Natty</li>
-        <li>Suavecito</li>
-        <li>Malin+Goetz</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Цены на услуги наших мастеров</h2>
-      <table>
-        <tr>
-          <td>стрижка</td>
-          <td>1500 ₽</td>
-        </tr>
-        <tr>
-          <td>стрижка бороды</td>
-          <td>500 ₽</td>
-        </tr>
-        <tr>
-          <td>накрутка усов</td>
-          <td>350 ₽</td>
-        </tr>
-      </table>
-    </section>
-    <section>
-      <h2>Несколько слов о нас</h2>
+    <p class="slogan">истинно мужская классика</p>
+
+    <div class="columns">
+      <section>
+        <h2 class="visually-hidden">Средства</h2>
+        <p class="column-motto">мы используем только лучшие средства:</p>
+        <ul class="brands-list">
+          <li>Baxter of California</li>
+          <li>Mr Natty</li>
+          <li>Suavecito</li>
+          <li>Malin+Goetz</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="visually-hidden">Цены на услуги наших мастеров</h2>
+        <table class="service-table">
+          <tr>
+            <td>стрижка</td>
+            <td>1500 ₽</td>
+          </tr>
+          <tr>
+            <td>стрижка бороды</td>
+            <td>500 ₽</td>
+          </tr>
+          <tr>
+            <td>накрутка усов</td>
+            <td>350 ₽</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+
+    <section class="about">
+      <h2 class="column-motto">Несколько слов о нас</h2>
       <p>
         Наша парикмахерская занимается исключительно мужскими стрижками.
         Стрижка каждого клиента для нас - это уникальная и продуманная до
@@ -69,44 +80,50 @@
       </p>
     </section>
   </main>
-  <footer>
-    <p>
-      Барбершоп "Бородинский"<br>
-      Адрес: г. Санкт-Петербург, Б.Конюшенная, д.19/8<br>
-      <a href="#">Как нас найти?</a><br>
-      Телефон: +7 (495) 666-02-66
+  <footer class="main-footer">
+    <p class="footer-contacts">
+      Барбершоп «Бородинский»<br>
+      Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+      <a href="map.html">Как нас найти?</a><br>
+      Телефон: +7 (812) 666-02-66
     </p>
-    <div class="social">
-      <p>Давайте дружить!</p>
+    <div class="footer-social">
+      <b>Давайте дружить!</b>
       <ul>
-        <li><a href="#">VK</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li><a class="social-button" href="#">Вконтакте</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
       </ul>
     </div>
-    <p>Разработано в <a href="https://htmlacademy.ru">HTML Academy</a></p>
+    <p class="footer-copyright">
+      <b>Разработано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+    </p>
   </footer>
-  <section>
+
+  <section class="modal modal-login">
     <h2>Личный кабинет</h2>
     <p>Введите свой логин и пароль.</p>
-    <form action="#" method="post">
+    <form class="login-form" action="#" method="post">
       <p>
-        <label for="login-field">Логин</label>
-        <input type="text" name="login" id="login-field" placeholder="Логин">
+        <label class="visually-hidden" for="login-field">Логин</label>
+        <input class="login-icon-user" type="text" name="login" id="login-field" placeholder="email@example.com">
       </p>
       <p>
-        <label for="password-field">Пароль</label>
-        <input type="password" name="password" id="password-field" placeholder="Пароль">
+        <label class="visually-hidden" for="password-field">Пароль</label>
+        <input class="login-icon-password" type="password" name="password" id="password-field" placeholder="••••••••">
       </p>
-      <p>
-        <input type="checkbox" name="remember-me" id="remember-me-field">
-        <label for="remember-me-field">Запомните меня</label>
+      <p class="login-password-info">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember-me" class="visually-hidden">
+          <span class="checkbox-indicator">Запомните меня</span>
+        </label>
+        <a class="restore" href="#">Я забыл пароль</a>
       </p>
-      <a href="#">Я забыл пароль</a>
-      <button type="submit">Войти</button>
+
+      <button class="button" type="submit">Войти</button>
     </form>
 
-    <button type="button">Закрыть</button>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 </body>
 
